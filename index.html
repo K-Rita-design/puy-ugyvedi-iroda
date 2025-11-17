@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Puy Ügyvédi Iroda – Polgári, Gazdasági és Ingatlanjog</title>
+  <meta name="description"
+    content="Puy Ügyvédi Iroda: több mint 10 év tapasztalattal polgári, gazdasági, ingatlan- és családjogi képviselet Budapesten." />
+  <meta property="og:title" content="Puy Ügyvédi Iroda" />
+  <meta property="og:description"
+    content="Személyre szabott jogi képviselet polgári, gazdasági, ingatlan- és családjogi ügyekben." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="hu_HU" />
+  <meta property="og:url" content="https://puy.local" />
+  <meta name="theme-color" content="#0b1f35" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+      --brand-primary: #0b1f35;
+      --brand-secondary: #b99a55;
+      --brand-accent: #edf2f7;
+      font-family: 'Inter Var', 'Inter', 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      font-family: var(--inter-font, 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+      background-color: #f9fafb;
+      color: #0f172a;
+      min-height: 100vh;
+    }
+
+    .hero-gradient {
+      background: radial-gradient(circle at top, rgba(11, 31, 53, 0.9) 0%, rgba(11, 31, 53, 0.85) 30%, rgba(11, 31, 53, 0.95) 60%, #050d18 100%);
+    }
+
+    .glass-panel {
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .section-heading {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .service-card {
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+    }
+
+    .contact-card {
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    /* Subtle entrance and float animations */
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes soft-float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fade-in-up 700ms ease-out forwards;
+    }
+
+    .fade-in-up.delay-1,
+    .fade-in-up-on-scroll.in-view.delay-1 {
+      animation-delay: 200ms;
+    }
+
+    .fade-in-up.delay-2,
+    .fade-in-up-on-scroll.in-view.delay-2 {
+      animation-delay: 400ms;
+    }
+
+    .fade-in-up.delay-3,
+    .fade-in-up-on-scroll.in-view.delay-3 {
+      animation-delay: 600ms;
+    }
+
+    .fade-in-up.delay-4,
+    .fade-in-up-on-scroll.in-view.delay-4 {
+      animation-delay: 800ms;
+    }
+
+    .fade-in-up.delay-5,
+    .fade-in-up-on-scroll.in-view.delay-5 {
+      animation-delay: 1000ms;
+    }
+
+    /* Scroll-triggered variant */
+    .fade-in-up-on-scroll {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    .fade-in-up-on-scroll.in-view {
+      animation: fade-in-up 700ms ease-out forwards;
+    }
+
+    .soft-float {
+      animation: soft-float 12s ease-in-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif']
+          },
+          colors: {
+            brand: {
+              primary: '#0b1f35',
+              secondary: '#b99a55',
+              accent: '#edf2f7'
+            }
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="antialiased text-slate-900">
+  <header class="relative hero-gradient text-white">
+    <div class="absolute inset-0 opacity-30" aria-hidden="true">
+      <div class="w-full h-full bg-gradient-to-b from-transparent to-black"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-6xl px-6 py-10 lg:py-16">
+      <nav class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between fade-in-up">
+        <div class="flex items-center gap-3">
+          <div class="h-12 w-12 rounded-full  bg-white/10 flex items-center justify-center text-lg font-semibold ">§
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-brand-secondary ">Puy Ügyvédi Iroda</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-white/70">
+          <a href="#bemutatkozas" class="hover:text-white">Bemutatkozás</a>
+          <a href="#szakteruletek" class="hover:text-white">Szakterületek</a>
+          <a href="#elerhetoseg" class="hover:text-white">Elérhetőség</a>
+          <a href="tel:+36301234567"
+            class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-white hover:border-white">
+            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+            +36 30 123 4567
+          </a>
+        </div>
+      </nav>
+
+      <div class="mt-16 grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div>
+          <h1 class="mt-6 font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl fade-in-up delay-1">
+            Puy Ügyvédi Iroda
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg text-white/80 fade-in-up delay-2">
+            Dr. Puy Kristóf polgári, gazdasági, ingatlan- és családjogi ügyekben nyújt átfogó támogatást, kiemelt
+            figyelemmel és letisztult kommunikációval.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#elerhetoseg"
+              class="inline-flex items-center justify-center rounded-full bg-brand-secondary px-6 py-3 text-base font-semibold text-brand-primary transition hover:-translate-y-0.5">
+              Kapcsolatfelvétel
+            </a>
+            <a href="#szakteruletek"
+              class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-base font-semibold text-white transition hover:-translate-y-0.5">
+              Szakterületek
+            </a>
+          </div>
+        </div>
+        <div class="glass-panel relative overflow-hidden rounded-3xl shadow-2xl soft-float">
+          <img
+            src="https://framerusercontent.com/images/VujkRu3PYxbjbXkgQrYAPlfwXw.jpg?scale-down-to=2048&width=4134&height=5840"
+            alt="Portréfotó Dr. Puy Kristófról" class="h-full w-full object-cover" loading="lazy" />
+        </div>
+      </div>
+
+
+    </div>
+  </header>
+
+  <main>
+    <section id="bemutatkozas" class="bg-white">
+      <div class="mx-auto max-w-5xl px-6 py-16 lg:py-24">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p class="section-heading text-brand-secondary text-sm">Bemutatkozás</p>
+            <h2 class="mt-4 font-serif text-3xl text-brand-primary sm:text-4xl">
+              Dr. Puy Kristóf – személyes odafigyelés minden ügyben
+            </h2>
+            <p class="mt-6 text-lg leading-relaxed text-slate-700">
+              Több mint 10 év tapasztalattal rendelkezem a jog területén, különös tekintettel a polgári és gazdasági
+              jogra. Ügyvédi munkám során mindig az ügyfél érdekeit helyezem előtérbe. Személyes odafigyeléssel, alapos
+              felkészüléssel és egyértelmű kommunikációval dolgozom minden ügyben.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-slate-700">
+              Célom, hogy ügyfeleimnek ne csak jogi képviseletet, hanem valódi partnert nyújtsak, aki megérti az
+              igényeiket és a lehető legjobb eredmény elérésére törekszik.
+            </p>
+          </div>
+          <div class="rounded-3xl bg-slate-50 p-8 shadow-lg">
+            <p class="text-sm uppercase tracking-[0.4em] text-brand-secondary">Fő értékek</p>
+            <ul class="mt-6 space-y-4 text-base text-slate-700">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand-secondary"></span>
+                <span>Átlátható, egyenes kommunikáció</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand-secondary"></span>
+                <span>Személyre szabott stratégia</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand-secondary"></span>
+                <span>Határidők pontos betartása</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-brand-secondary"></span>
+                <span>Diszkréció és bizalom</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="szakteruletek" class="bg-slate-50">
+      <div class="mx-auto max-w-6xl px-6 py-16 lg:py-24">
+        <div class="flex flex-col gap-4 text-center">
+          <p class="section-heading text-sm text-brand-secondary">Szakterületek</p>
+          <h2 class="font-serif text-3xl text-brand-primary sm:text-4xl">Komplex jogi támogatás</h2>
+          <p class="mx-auto max-w-2xl text-base text-slate-600">
+            Szerződéskötéstől a vitás ügyek lezárásáig teljes körű képviselet polgári, gazdasági, ingatlan-, család-,
+            munka- és büntetőjogi területen.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll">
+            <h3 class="font-serif text-2xl text-brand-primary">Polgári jog</h3>
+            <p class="mt-4 text-sm uppercase tracking-[0.3em] text-brand-secondary">Szerződések</p>
+            <p class="mt-4 text-base text-slate-600">Szerződések, kártérítési ügyek, tulajdonjogi viták, öröklési ügyek
+              komplex kezelése.</p>
+          </article>
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-1">
+            <h3 class="font-serif text-2xl text-brand-primary">Családjog</h3>
+            <p class="mt-4 text-sm uppercase tracking-[0.3em] text-brand-secondary">Biztonság</p>
+            <p class="mt-4 text-base text-slate-600">Házassági szerződések, válási eljárások, gyerektartás,
+              vagyonmegosztás.</p>
+          </article>
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-2">
+            <h3 class="font-serif text-2xl text-brand-primary">Ingatlanjog</h3>
+            <p class="mt-4 text-sm uppercase tracking-[0.3em] text-brand-secondary">Bizalom</p>
+            <p class="mt-4 text-base text-slate-600">Adásvételi szerződések, bérleti jogviszonyok, tulajdonjogi
+              rendezés, építési jog.</p>
+          </article>
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-3">
+            <h3 class="font-serif text-2xl text-brand-primary">Munkajog</h3>
+            <p class="mt-4 text-sm uppercase tracking-[0.3em] text-brand-secondary">Védelem</p>
+            <p class="mt-4 text-base text-slate-600">Munkaszerződések, munkajogi viták, végkielégítések, kollektív
+              szerződések.</p>
+          </article>
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-4">
+            <h3 class="font-serif text-2xl text-brand-primary">Gazdasági jog</h3>
+            <p class="mt-4 text-sm uppercase tracking-[0.3em] text-brand-secondary">Stratégia</p>
+            <p class="mt-4 text-base text-slate-600">Társasági jog, cégalapítás, vállalkozási szerződések, M&A
+              tranzakciók jogi támogatása.</p>
+          </article>
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-5">
+            <h3 class="font-serif text-2xl text-brand-primary">Büntetőjog</h3>
+            <p class="mt-4 text-sm uppercase tracking-[0.3em] text-brand-secondary">Képviselet</p>
+            <p class="mt-4 text-base text-slate-600">Büntetőeljárásban való védelem, magánokirat-hamisítás, gazdasági
+              bűncselekmények.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="elerhetoseg" class="bg-white">
+      <div class="mx-auto max-w-5xl px-6 py-16 lg:py-24">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p class="section-heading text-sm text-brand-secondary">Elérhetőség</p>
+            <h2 class="mt-4 font-serif text-3xl text-brand-primary sm:text-4xl">Kapcsolatfelvétel</h2>
+            <p class="mt-4 text-base text-slate-600">Telefonos és online egyeztetés, irodai találkozók előre egyeztetett
+              időpontban lehetségesek.</p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="tel:+36301234567"
+                class="inline-flex items-center gap-3 rounded-2xl bg-brand-primary px-5 py-3 text-white shadow-lg">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                +36 30 123 4567
+              </a>
+              <a href="mailto:iroda@puy.eu"
+                class="inline-flex items-center gap-3 rounded-2xl border border-brand-primary/10 px-5 py-3 text-brand-primary">
+                iroda@puy.eu
+              </a>
+            </div>
+          </div>
+          <div class="contact-card rounded-3xl bg-slate-50 p-8 shadow-sm">
+            <dl class="space-y-6 text-base text-slate-700">
+              <div>
+                <dt class="text-xs uppercase tracking-[0.3em] text-brand-secondary">Telefon</dt>
+                <dd class="mt-2 text-xl font-semibold text-brand-primary">+36 30 123 4567</dd>
+              </div>
+              <div>
+                <dt class="text-xs uppercase tracking-[0.3em] text-brand-secondary">E-mail</dt>
+                <dd class="mt-2 text-xl font-semibold text-brand-primary">iroda@puy.eu</dd>
+              </div>
+              <div>
+                <dt class="text-xs uppercase tracking-[0.3em] text-brand-secondary">Cím</dt>
+                <dd class="mt-2 text-lg text-slate-700">1055 Budapest, Kossuth Lajos tér 1-3.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-primary text-white">
+    <div class="mx-auto max-w-6xl px-6 py-10">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.4em] text-white/60">Puy Ügyvédi Iroda</p>
+          <p class="mt-2 text-lg font-serif">Több mint 10 éves tapasztalat, személyre szabott megoldások.</p>
+        </div>
+        <div class="text-sm text-white/70">
+          <p>1055 Budapest, Kossuth Lajos tér 1-3.</p>
+          <p class="mt-1">Telefon: <a class="text-white" href="tel:+36301234567">+36 30 123 4567</a></p>
+          <p class="mt-1">E-mail: <a class="text-white" href="mailto:iroda@puy.eu">iroda@puy.eu</a></p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-white/10 pt-6 text-sm text-white/60">
+        <p>© <span id="year"></span> Puy Ügyvédi Iroda. Minden jog fenntartva.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // Scroll-triggered animations for practice-area cards
+    const scrollAnimated = document.querySelectorAll('.fade-in-up-on-scroll');
+    if ('IntersectionObserver' in window && scrollAnimated.length) {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      scrollAnimated.forEach(el => observer.observe(el));
+    } else {
+      // Fallback: ensure content is visible without animation
+      scrollAnimated.forEach(el => el.classList.add('in-view'));
+    }
+  </script>
+</body>
+
+</html>
