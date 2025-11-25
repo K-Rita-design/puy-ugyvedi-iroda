@@ -210,8 +210,8 @@
               data-i18n="nav-contact">Elérhetőség</a>
             <button type="button"
               class="rounded-full border border-white/20 px-4 py-2 text-right text-white transition hover:border-white hover:text-brand-secondary lg:ml-4 lg:text-left"
-              data-language-toggle aria-label="Switch language">
-              EN
+              data-language-toggle aria-label="Váltás angol nyelvre">
+              HU
             </button>
           </div>
         </nav>
@@ -663,10 +663,13 @@
       });
 
       if (languageToggle) {
-        const label =
-          lang === 'hu' ? 'Váltás angol nyelvre' : 'Switch to Hungarian';
-        languageToggle.textContent = lang === 'hu' ? 'EN' : 'HU';
-        languageToggle.setAttribute('aria-label', label);
+        if (lang === 'hu') {
+          languageToggle.textContent = 'HU';
+          languageToggle.setAttribute('aria-label', 'Váltás angol nyelvre');
+        } else {
+          languageToggle.textContent = 'EN';
+          languageToggle.setAttribute('aria-label', 'Switch to Hungarian');
+        }
       }
 
       localStorage.setItem('preferredLang', lang);
@@ -677,8 +680,9 @@
 
     if (languageToggle) {
       languageToggle.addEventListener('click', () => {
-        currentLanguage = currentLanguage === 'hu' ? 'en' : 'hu';
-        applyLanguage(currentLanguage);
+        const nextLanguage = currentLanguage === 'hu' ? 'en' : 'hu';
+        applyLanguage(nextLanguage);
+        currentLanguage = nextLanguage;
       });
     }
 
