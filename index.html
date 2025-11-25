@@ -279,9 +279,9 @@
           </div>
         </div>
         
-        <div class="grid lg:grid-cols-5 gap-x-24 gap-y-8">
+        <div class="grid lg:grid-cols-5 gap-x-24 gap-y-16">
   
-          <div class="lg:col-span-3 flex flex-col justify-start gap-4 lg:order-1">
+          <div class="lg:col-span-3 flex flex-col justify-start gap-4 lg:order-1 order-2">
             <p class="text-lg leading-relaxed text-slate-700" data-i18n="about-paragraph-1">
               Egy évtizedet meghaladó tapasztalattal rendelkezem a jogi és gazdasági élet különböző területein. Tanulmányaimat Magyarországon és külföldön folytattam: jogász diplomámat a Pázmány Péter Katolikus Egyetemen szereztem, közgazdasági ismereteimet a Budapesti Corvinus Egyetemen mélyítettem el, nemzetközi hátteremet pedig skót és németországi tanulmányaim alapozták meg.
             </p>
@@ -295,7 +295,7 @@
               Szakmai felkészültségemet erősíti a felsőfokú angol jogi nyelvtudás és a középfokú német nyelvismeret, amelyek révén hazai és nemzetközi környezetben egyaránt hatékonyan képviselem ügyfeleimet.
             </p>
           </div>
-          <div class="lg:col-span-2 flex justify-center fade-in-up delay-1 lg:order-2">
+          <div class="lg:col-span-2 flex justify-center fade-in-up delay-1 lg:order-2 order-1">
             <div class="glass-panel relative overflow-hidden rounded-3xl shadow-2xl soft-float w-full sm:w-96 md:w-[450px] lg:w-[500px] max-h-[500px] sm:max-h-[600px] lg:max-h-[650px] mx-auto">
               <img
                 src="portrait.jpg"
@@ -479,29 +479,12 @@
       yearSpan.textContent = new Date().getFullYear();
     }
 
-    const stickyNav = document.querySelector('[data-sticky-nav]');
-    let isMobileMenuOpen = false;
-
-    const updateNavBackground = () => {
-      if (!stickyNav) return;
-      if (window.scrollY > 0 || isMobileMenuOpen) {
-        stickyNav.classList.add('hero-gradient');
-        stickyNav.classList.remove('bg-transparent');
-      } else {
-        stickyNav.classList.remove('hero-gradient');
-        stickyNav.classList.add('bg-transparent');
-      }
-    };
-
     const navToggle = document.querySelector('[data-nav-toggle]');
     const primaryNav = document.getElementById('primary-nav');
     if (navToggle && primaryNav) {
       navToggle.addEventListener('click', () => {
         const isHidden = primaryNav.classList.toggle('hidden');
-        const isExpanded = !isHidden;
-        navToggle.setAttribute('aria-expanded', String(isExpanded));
-        isMobileMenuOpen = isExpanded;
-        updateNavBackground();
+        navToggle.setAttribute('aria-expanded', String(!isHidden));
       });
     }
 
@@ -703,8 +686,20 @@
       });
     }
 
-    updateNavBackground();
-    window.addEventListener('scroll', updateNavBackground, { passive: true });
+    const stickyNav = document.querySelector('[data-sticky-nav]');
+    if (stickyNav) {
+      const updateNavBackground = () => {
+        if (window.scrollY > 0) {
+          stickyNav.classList.add('hero-gradient');
+          stickyNav.classList.remove('bg-transparent');
+        } else {
+          stickyNav.classList.remove('hero-gradient');
+          stickyNav.classList.add('bg-transparent');
+        }
+      };
+      updateNavBackground();
+      window.addEventListener('scroll', updateNavBackground, { passive: true });
+    }
 
     // Scroll-triggered animations for practice-area cards
     const scrollAnimated = document.querySelectorAll('.fade-in-up-on-scroll');
