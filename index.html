@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Puy Ügyvédi Iroda – Polgári, Gazdasági és Ingatlanjog</title>
   <meta name="description"
-    content="Puy Ügyvédi Iroda: több mint 10 év tapasztalattal polgári, gazdasági, ingatlan- és családjogi képviselet Budapesten." />
+    content="Puy Ügyvédi Iroda: több mint 10 év tapasztalattal polgári, gazdasági, ingatlan- és sportjogi képviselet Budapesten." />
   <meta property="og:title" content="Puy Ügyvédi Iroda" />
   <meta property="og:description"
-    content="Személyre szabott jogi képviselet polgári, gazdasági, ingatlan- és családjogi ügyekben." />
+    content="Személyre szabott jogi képviselet polgári, gazdasági, ingatlan- és sportjogi ügyekben." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="hu_HU" />
   <meta property="og:url" content="https://puy.local" />
@@ -36,9 +36,8 @@
     }
 
     .hero-gradient {
-      background: radial-gradient(circle at top, rgba(11, 31, 53, 0.9) 0%, rgba(11, 31, 53, 0.85) 30%, rgba(11, 31, 53, 0.95) 60%, #050d18 100%);
-    }
-
+      background: radial-gradient(circle at top, rgba(11, 31, 53, 0.96) 15%, rgba(11, 31, 53, 0.93) 20%, rgba(11, 31, 53, 0.95) 55%, #050d18 100%);
+}
     .glass-panel {
       backdrop-filter: blur(18px);
       background: rgba(255, 255, 255, 0.08);
@@ -119,6 +118,16 @@
       animation-delay: 1000ms;
     }
 
+    .fade-in-up.delay-6,
+    .fade-in-up-on-scroll.in-view.delay-6 {
+      animation-delay: 1200ms;
+    }
+
+    .fade-in-up.delay-7,
+    .fade-in-up-on-scroll.in-view.delay-7 {
+      animation-delay: 1400ms;
+    }
+
     /* Scroll-triggered variant */
     .fade-in-up-on-scroll {
       opacity: 0;
@@ -176,9 +185,9 @@
           <div class="flex w-full items-center justify-between gap-4">
             <a href="#top" data-scroll-top
               class="flex items-center gap-3 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary rounded-full">
-              <div class="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center text-lg font-semibold">§</div>
+              <img src="logo.png" alt="Puy Ügyvédi Iroda" class="h-12 w-12 rounded-full object-cover">
               <div>
-                <p class="text-xs uppercase tracking-[0.3em] text-brand-secondary" data-i18n="brand-name">Puy Ügyvédi Iroda</p>
+                <p class="text-xs uppercase tracking-[0.3em] text-brand-accent" data-i18n="brand-name">Puy Ügyvédi Iroda</p>
               </div>
             </a>
             <button type="button"
@@ -189,7 +198,7 @@
             </button>
           </div>
           <div id="primary-nav"
-            class="hidden w-full flex-col items-stretch gap-4 text-sm text-white/70 lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-16">
+            class="hidden w-full flex-col items-end gap-4 text-sm text-white/70 lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-16">
             <a href="#bemutatkozas"
               class="rounded-full px-4 py-2 text-center hover:text-brand-secondary whitespace-nowrap lg:px-0 lg:py-0 lg:text-left"
               data-i18n="nav-about">About</a>
@@ -209,85 +218,107 @@
         </div>
         </div>
 
-    <header id="top" class="relative text-white pt-20">
-      <div class="relative z-10">
-        <div class="mx-auto max-w-6xl px-6 py-10 lg:py-16">
-          <div class="mt-4 grid gap-16 place-items-center text-center lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:text-left">
-            <div class="flex max-w-xl flex-col items-center lg:items-start">
-              <h1 class="mt-6 font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl fade-in-up delay-1" data-i18n="hero-heading">
-                Puy Ügyvédi Iroda
-          </h1>
-              <p class="mt-6 max-w-2xl text-lg text-white/80 fade-in-up delay-2" data-i18n="hero-intro">
-                Dr. Kristóf Puy provides comprehensive support in civil, business, real estate, and family law with attentive, transparent communication.
-          </p>
-              <div class="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
-            <a href="#elerhetoseg"
-                  class="inline-flex items-center justify-center rounded-full bg-brand-secondary px-6 py-3 text-base font-semibold text-brand-primary transition hover:-translate-y-0.5"
-                  data-i18n="hero-primary-cta">
+        <header id="top" class="relative text-white pt-56 pb-32 scroll-mt-28">
+          <div class="relative z-10">
+            <div class="mx-auto max-w-6xl px-6">
+        
+              <!-- HERO SZÖVEG BLOKK -->
+              <div class="flex max-w-2xl flex-col items-center text-center mx-auto">
+        
+                <h1 class="font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl fade-in-up delay-1"
+                    data-i18n="hero-heading">
+                  Puy Ügyvédi Iroda
+                </h1>
+        
+                <p class="mt-14 text-lg text-white/80 fade-in-up delay-2 max-w-2xl"
+                   data-i18n="hero-intro1">
+                   Több mint tíz év hazai és nemzetközi tapasztalattal nyújtunk alapos, szakmailag megalapozott és ügyfélközpontú jogi támogatást. Fő szakterületeink: ingatlanjog, gazdasági jog, munkajog, társasházi jog és sportjog — minden ügyben személyre szabott, átgondolt megoldást kínálunk.
+                </p>
+        
+              </div>
+
+        
+              <!-- GOMBOK -->
+              <div class="mt-20 flex flex-wrap justify-center gap-6 fade-in-up delay-6">
+                <a href="#elerhetoseg"
+                   class="inline-flex items-center justify-center rounded-full bg-brand-secondary px-7 py-3 text-base font-semibold text-brand-primary transition hover:-translate-y-0.5 shadow-md hover:shadow-lg"
+                   data-i18n="hero-primary-cta">
                   Contact
-            </a>
-            <a href="#szakteruletek"
-                  class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-base font-semibold text-white transition hover:-translate-y-0.5"
-                  data-i18n="hero-secondary-cta">
+                </a>
+                <a href="#szakteruletek"
+                   class="inline-flex items-center justify-center rounded-full border border-white/40 px-7 py-3 text-base font-semibold text-white transition hover:-translate-y-0.5"
+                   data-i18n="hero-secondary-cta">
                   Practice Areas
-            </a>
+                </a>
+              </div>
+        
+            </div>
           </div>
-        </div>
-          <div class="glass-panel relative overflow-hidden rounded-3xl shadow-2xl soft-float max-w-sm mx-auto sm:max-w-md lg:max-w-none max-h-[360px] sm:max-h-[460px] lg:max-h-none">
-          <img
-            src="https://framerusercontent.com/images/VujkRu3PYxbjbXkgQrYAPlfwXw.jpg?scale-down-to=2048&width=4134&height=5840"
-              class="h-full w-full object-contain lg:object-cover" loading="lazy"
-              data-i18n-attr="alt:hero-image-alt"
-              alt="Portréfotó Dr. Puy Kristófról" />
-          </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    </div>
+        </header>
 
   <main>
-    <section id="bemutatkozas" class="bg-white scroll-mt-28">
-      <div class="mx-auto max-w-5xl px-6 py-16 lg:py-24">
-        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div>
-            <p class="section-heading text-brand-secondary text-sm" data-i18n="about-section-label">About</p>
-            <h2 class="mt-4 font-serif text-3xl text-brand-primary sm:text-4xl" data-i18n="about-heading">
-              Dr. Kristóf Puy – personal attention in every case
+    <section id="bemutatkozas" class="bg-white scroll-mt-12">
+      <div class="mx-auto max-w-6xl px-6 py-16 lg:py-24">
+    
+        <!-- Középre igazított cím -->
+        <div class="mx-auto max-w-6xl pt-0 pb-16 lg:pt-0 lg:pb24">
+          <div class="flex flex-col gap-4 text-center">
+            
+            <p class="section-heading text-sm text-brand-secondary" data-i18n="about-section-label">
+              Bemutatkozás
+            </p>
+            
+            <h2 class="font-serif text-3xl text-brand-primary sm:text-4xl" data-i18n="about-heading">
+              Dr. Puy Kristóf
             </h2>
-            <p class="mt-6 text-lg leading-relaxed text-slate-700" data-i18n="about-paragraph-1">
-              With more than 10 years of experience in civil and business law, I always prioritise my clients’ interests. Every case is handled with personal attention, thorough preparation, and clear communication.
-            </p>
-            <p class="mt-4 text-lg leading-relaxed text-slate-700" data-i18n="about-paragraph-2">
-              My goal is to be more than legal representation – a committed partner who understands your needs and works toward the best possible outcome.
-            </p>
-          </div>
-          <div class="rounded-3xl bg-slate-50 p-8 shadow-lg">
-            <p class="text-sm uppercase tracking-[0.4em] text-brand-secondary" data-i18n="core-values-label">Core values</p>
-            <ul class="mt-6 space-y-4 text-base text-slate-700">
-              <li class="flex items-start gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-brand-secondary"></span>
-                <span data-i18n="value-1">Transparent, straightforward communication</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-brand-secondary"></span>
-                <span data-i18n="value-2">Tailored legal strategy</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-brand-secondary"></span>
-                <span data-i18n="value-3">Precise adherence to deadlines</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-brand-secondary"></span>
-                <span data-i18n="value-4">Discretion and trust</span>
-              </li>
-            </ul>
+            
+            <h3 class="text-base text-slate-600" data-i18n="about-subheading">
+              Puy Ügyvédi Iroda irodavezető ügyvédje
+            </h3>
+            
           </div>
         </div>
+        
+  
+        <!-- GRID: kép és szöveg -->
+        <div class="grid lg:grid-cols-4 gap-8">
+          
+          <!-- Kép (jobb oldalon) -->
+          <div class="lg:col-span-1 flex justify-center fade-in-up delay-1">
+            <div class="glass-panel relative overflow-hidden rounded-3xl shadow-2xl soft-float w-full sm:w-96 md:w-[450px] lg:w-[500px] max-h-[500px] sm:max-h-[600px] lg:max-h-[650px] mx-auto">
+              <img
+                src="portrait.jpg"
+                class="h-full w-full object-cover"
+                loading="lazy"
+                alt="Portréfotó Dr. Puy Kristófról" />
+            </div>
+          </div>
+    
+          <!-- Szöveg első része (a kép mellett, bal oldalon) -->
+          <div class="lg:col-span-3 flex flex-col justify-start gap-4">
+            <p class="text-lg leading-relaxed text-slate-700" data-i18n="about-paragraph-1">
+              With more than 10 years of experience in civil and business law, I always prioritise my clients’ interests...
+            </p>
+            <p class="text-lg leading-relaxed text-slate-700" data-i18n="about-paragraph-2">
+              My goal is to be more than legal representation...
+            </p>
+            <p class="text-lg leading-relaxed text-slate-700" data-i18n="about-paragraph-3">>
+              Különös figyelmet fordítok...
+            </p>
+          </div>
+    
+          <!-- Szöveg második része (teljes szélesség, kép alatt) -->
+          <div class="lg:col-span-4 flex flex-col justify-start gap-4">
+            <p class="text-lg leading-relaxed text-slate-700" data-i18n="about-paragraph-4">
+              Szakmai felkészültségemet erősíti...
+            </p>
+          </div>
+    
+        </div>
       </div>
-    </section>
+    </section>    
 
-    <section id="szakteruletek" class="bg-slate-50 scroll-mt-28">
+    <section id="szakteruletek" class="bg-slate-50 scroll-mt-12">
       <div class="mx-auto max-w-6xl px-6 py-16 lg:py-24">
         <div class="flex flex-col gap-4 text-center">
           <p class="section-heading text-sm text-brand-secondary" data-i18n="practice-section-label">Practice areas</p>
@@ -296,8 +327,8 @@
             Full representation from drafting agreements to resolving disputes across civil, business, real estate, family, labour, and criminal law.
           </p>
         </div>
-        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll">
+        <div class="mt-16 grid gap-6 justify-items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll w-full max-w-xs sm:max-w-sm lg:max-w-none">
             <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-civil-title">Civil Law</h3>
             <div class="mt-4 flex items-center gap-2 text-brand-secondary">
               <span class="sr-only" data-i18n="icon-civil">Contracts</span>
@@ -305,16 +336,7 @@
             </div>
             <p class="mt-4 text-base text-slate-600" data-i18n="practice-civil-desc">Contracts, compensation claims, property disputes, and estate matters handled end-to-end.</p>
           </article>
-          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-1">
-            <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-family-title">Családjog</h3>
-            <div class="mt-4 flex items-center gap-2 text-brand-secondary">
-              <span class="sr-only" data-i18n="icon-family">Biztonság</span>
-              <i class="ph ph-users-three text-3xl" aria-hidden="true"></i>
-            </div>
-            <p class="mt-4 text-base text-slate-600" data-i18n="practice-family-desc">Házassági szerződések, válási
-              eljárások, gyerektartás, vagyonmegosztás.</p>
-          </article>
-          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-2">
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-2 w-full max-w-xs sm:max-w-sm lg:max-w-none">
             <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-realestate-title">Ingatlanjog</h3>
             <div class="mt-4 flex items-center gap-2 text-brand-secondary">
               <span class="sr-only" data-i18n="icon-realestate">Bizalom</span>
@@ -323,7 +345,7 @@
             <p class="mt-4 text-base text-slate-600" data-i18n="practice-realestate-desc">Adásvételi szerződések, bérleti
               jogviszonyok, tulajdonjogi rendezés, építési jog.</p>
           </article>
-          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-3">
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-3 w-full max-w-xs sm:max-w-sm lg:max-w-none">
             <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-employment-title">Munkajog</h3>
             <div class="mt-4 flex items-center gap-2 text-brand-secondary">
               <span class="sr-only" data-i18n="icon-employment">Védelem</span>
@@ -332,31 +354,49 @@
             <p class="mt-4 text-base text-slate-600" data-i18n="practice-employment-desc">Munkaszerződések, munkajogi
               viták, végkielégítések, kollektív szerződések.</p>
           </article>
-          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-4">
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-4 w-full max-w-xs sm:max-w-sm lg:max-w-none">
             <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-business-title">Gazdasági jog</h3>
             <div class="mt-4 flex items-center gap-2 text-brand-secondary">
               <span class="sr-only" data-i18n="icon-business">Stratégia</span>
-              <i class="ph ph-buildings text-3xl" aria-hidden="true"></i>
+              <i class="ph ph-lightbulb text-3xl" aria-hidden="true"></i>
             </div>
             <p class="mt-4 text-base text-slate-600" data-i18n="practice-business-desc">Társasági jog, cégalapítás,
               vállalkozási szerződések, M&A tranzakciók jogi támogatása.</p>
           </article>
-          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-5">
-            <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-criminal-title">Büntetőjog</h3>
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-5 w-full max-w-xs sm:max-w-sm lg:max-w-none">
+            <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-sport-title">Sportjog</h3>
             <div class="mt-4 flex items-center gap-2 text-brand-secondary">
-              <span class="sr-only" data-i18n="icon-criminal">Képviselet</span>
-              <i class="ph ph-shield text-3xl" aria-hidden="true"></i>
+              <span class="sr-only" data-i18n="icon-sport">Biztonság</span>
+              <i class="ph ph-soccer-ball text-3xl" aria-hidden="true"></i>
             </div>
-            <p class="mt-4 text-base text-slate-600" data-i18n="practice-criminal-desc">Büntetőeljárásban való védelem,
+            <p class="mt-4 text-base text-slate-600" data-i18n="practice-sport-desc">Házassági szerződések, válási
+              eljárások, gyerektartás, vagyonmegosztás.</p>
+          </article>
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-6 w-full max-w-xs sm:max-w-sm lg:max-w-none">
+            <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-condominium-title">Társasházi jog</h3>
+            <div class="mt-4 flex items-center gap-2 text-brand-secondary">
+              <span class="sr-only" data-i18n="icon-condominium">Képviselet</span>
+              <i class="ph ph-buildings text-3xl" aria-hidden="true"></i>
+            </div>
+            <p class="mt-4 text-base text-slate-600" data-i18n="practice-condominium-desc">Büntetőeljárásban való védelem,
+              magánokirat-hamisítás, gazdasági bűncselekmények.</p>
+          </article>
+          <article class="service-card rounded-3xl bg-white p-6 shadow-sm fade-in-up-on-scroll delay-7 w-full max-w-xs sm:max-w-sm lg:max-w-none md:col-start-1 lg:col-start-2 min-h-[268px]">
+            <h3 class="font-serif text-2xl text-brand-primary" data-i18n="practice-civil society organizations-title">Civil szervezetek joga</h3>
+            <div class="mt-4 flex items-center gap-2 text-brand-secondary">
+              <span class="sr-only" data-i18n="icon-civil society organizations">Képviselet</span>
+              <i class="ph ph-users-three text-3xl" aria-hidden="true"></i>
+            </div>
+            <p class="mt-4 text-base text-slate-600" data-i18n="practice-civil society organizations-desc">Büntetőeljárásban való védelem,
               magánokirat-hamisítás, gazdasági bűncselekmények.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="elerhetoseg" class="bg-white scroll-mt-28">
-      <div class="mx-auto max-w-5xl px-6 py-16 lg:py-24">
-        <div class="space-y-10">
+    <section id="elerhetoseg" class="bg-white scroll-mt-12">
+      <div class="mx-auto max-w-6xl px-6 py-16 lg:py-24">
+        <div class="space-y-16">
           <div>
             <p class="section-heading text-sm text-brand-secondary" data-i18n="contact-section-label">Elérhetőség</p>
             <h2 class="mt-4 font-serif text-3xl text-brand-primary sm:text-4xl" data-i18n="contact-heading">
@@ -401,20 +441,20 @@
                   <div>
                     <dt class="text-xs uppercase tracking-[0.3em] text-brand-secondary"
                       data-i18n="contact-address-label">Cím</dt>
-                    <dd class="mt-2 text-lg text-slate-700">1055 Budapest, Kossuth Lajos tér 1-3.</dd>
+                    <dd class="mt-2 text-lg text-slate-700">1037 Budapest, Jablonka út 92.</dd>
                   </div>
                 </div>
             </dl>
             </div>
             <div class="overflow-hidden rounded-3xl shadow-lg ring-1 ring-brand-primary/10">
               <iframe
-                src="https://www.google.com/maps?q=1055+Budapest,+Kossuth+Lajos+t%C3%A9r+1-3.&output=embed"
+                src="https://www.google.com/maps?q=Budapest,+Jablonka+út+92,+1037+Budapest&output=embed"
                 class="h-64 w-full"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 allowfullscreen
                 data-i18n-attr="aria-label:map-label"
-                aria-label="Térkép: 1055 Budapest, Kossuth Lajos tér 1-3."></iframe>
+                aria-label="Térkép: 1037 Budapest, Jablonka út 92."></iframe>
             </div>
           </div>
         </div>
@@ -431,7 +471,7 @@
             szabott megoldások.</p>
         </div>
         <div class="text-sm text-white/70">
-          <p>1055 Budapest, Kossuth Lajos tér 1-3.</p>
+          <p>1037 Budapest, Jablonka út 92.</p>
           <p class="mt-1"><span data-i18n="footer-phone-label">Telefon</span>: <a
               class="text-white hover:text-brand-secondary transition-colors" href="tel:+36301234567">+36 30 123
               4567</a></p>
@@ -479,50 +519,53 @@
         'nav-practice': 'Szakterületek',
         'nav-contact': 'Elérhetőség',
         'hero-heading': 'Puy Ügyvédi Iroda',
-        'hero-intro':
-          'Dr. Puy Kristóf polgári, gazdasági, ingatlan- és családjogi ügyekben nyújt átfogó támogatást, kiemelt figyelemmel és letisztult kommunikációval.',
+        'hero-intro1': 'Több mint tíz év hazai és nemzetközi tapasztalattal nyújtunk alapos, szakmailag megalapozott és ügyfélközpontú jogi támogatást. Fő szakterületeink: ingatlanjog, gazdasági jog, munkajog, társasházi jog és sportjog — minden ügyben személyre szabott, átgondolt megoldást kínálunk.',
         'hero-primary-cta': 'Kapcsolatfelvétel',
         'hero-secondary-cta': 'Szakterületek',
         'hero-image-alt': 'Portréfotó Dr. Puy Kristófról',
         'about-section-label': 'Bemutatkozás',
-        'about-heading': 'Dr. Puy Kristóf – személyes odafigyelés minden ügyben',
+        'about-heading': 'Dr. Puy Kristóf',
+        'about-subheading': 'Puy Ügyvédi Iroda irodavezető ügyvédje',
         'about-paragraph-1':
-          'Több mint 10 év tapasztalattal rendelkezem a jog területén, különös tekintettel a polgári és gazdasági jogra. Ügyvédi munkám során mindig az ügyfél érdekeit helyezem előtérbe. Személyes odafigyeléssel, alapos felkészüléssel és egyértelmű kommunikációval dolgozom minden ügyben.',
+          'Több mint egy évtizedes tapasztalattal rendelkezem a jogi és gazdasági élet különböző területein. Tanulmányaimat Magyarországon és külföldön folytattam: jogász diplomámat a Pázmány Péter Katolikus Egyetemen szereztem, közgazdasági ismereteimet a Budapesti Corvinus Egyetemen mélyítettem el, nemzetközi hátteremet pedig skót és németországi tanulmányaim alapozták meg.',
         'about-paragraph-2':
-          'Célom, hogy ügyfeleimnek ne csak jogi képviseletet, hanem valódi partnert nyújtsak, aki megérti az igényeiket és a lehető legjobb eredmény elérésére törekszik.',
-        'core-values-label': 'Fő értékek',
-        'value-1': 'Átlátható, egyenes kommunikáció',
-        'value-2': 'Személyre szabott stratégia',
-        'value-3': 'Határidők pontos betartása',
-        'value-4': 'Diszkréció és bizalom',
+          'Pályafutásom során meghatározó szerepet vállaltam rangos szervezeteknél, köztük a Magyar Tenisz Szövetségnél és az MTK Budapestnél. Ügyvédi gyakorlatomat a Szőcs Ügyvédi Irodában kezdtem, majd 2021-ben megalapítottam saját irodámat, ahol irodavezető ügyvédként személyre szabott és szakmailag megalapozott tanácsadást nyújtok ügyfeleimnek.',
+        'about-paragraph-3':
+          'Különös figyelmet fordítok azokra a területekre, amelyekben szakmai és személyes tapasztalatom is kiemelkedő: az ingatlanjog, a gazdasági jog, a munkajog, a társasházi jog, valamint a versenyzői vívómúltamból fakadóan a sportjog állnak a munkám fókuszában.',
+        'about-paragraph-4':
+          'Szakmai felkészültségemet erősíti a felsőfokú angol jogi nyelvtudás és a középfokú német nyelvismeret, amelyek révén hazai és nemzetközi környezetben egyaránt hatékonyan képviselem ügyfeleimet.',
         'practice-section-label': 'Szakterületek',
         'practice-heading': 'Komplex jogi támogatás',
         'practice-description':
-          'Szerződéskötéstől a vitás ügyek lezárásáig teljes körű képviselet polgári, gazdasági, ingatlan-, család-, munka- és büntetőjogi területen.',
+          'Szerződéskötéstől a vitás ügyek lezárásáig teljes körű képviselet polgári, gazdasági, társasházi, civil szervezetek, ingatlan-, munka- és sportjogi területen.',
         'practice-civil-title': 'Polgári jog',
         'icon-civil': 'Szerződések',
         'practice-civil-desc':
-          'Szerződések, kártérítési ügyek, tulajdonjogi viták, öröklési ügyek komplex kezelése.',
-        'practice-family-title': 'Családjog',
-        'icon-family': 'Biztonság',
-        'practice-family-desc':
-          'Házassági szerződések, válási eljárások, gyerektartás, vagyonmegosztás.',
+          'Vállalkozási és megbízási szerződések készítése, véleményezése, kártérítési ügyek, fizetési felszólítás, követeléskezelés, peres és nemperes eljárásokban jogi képviselet.',
         'practice-realestate-title': 'Ingatlanjog',
         'icon-realestate': 'Bizalom',
         'practice-realestate-desc':
-          'Adásvételi szerződések, bérleti jogviszonyok, tulajdonjogi rendezés, építési jog.',
+          'Adásvételi szerződések és bérleti szerződések szerkesztése ill. véleményézése, tulajdonjogi jogviták, használati jogok.',
         'practice-employment-title': 'Munkajog',
         'icon-employment': 'Védelem',
         'practice-employment-desc':
-          'Munkaszerződések, munkajogi viták, végkielégítések, kollektív szerződések.',
+          'Munkaszerződések előkészítése ill. véleményezése, munkajogi viták, munkáltatói jogok gyakorlása, munkavállalói jogok védelme, mediáció, peres képviselet.',
         'practice-business-title': 'Gazdasági jog',
         'icon-business': 'Stratégia',
         'practice-business-desc':
-          'Társasági jog, cégalapítás, vállalkozási szerződések, M&A tranzakciók jogi támogatása.',
-        'practice-criminal-title': 'Büntetőjog',
-        'icon-criminal': 'Képviselet',
-        'practice-criminal-desc':
-          'Büntetőeljárásban való védelem, magánokirat-hamisítás, gazdasági bűncselekmények.',
+          'Társasági jog, cégalapítás, cégmódosítás, működéssel összefüggő jogi tanácsadás, üzletrész átruházás, átalakulás.',
+        'practice-sport-title': 'Sportjog',
+        'icon-sport': 'Biztonság',
+        'practice-sport-desc':
+          'Sporttevékenységek jogi szabályozása, sportszerződések, átigazolások versenyzők és sportszervezetek jogai, sportesemények szervezésének feltételei, dopping és fegyelmi eljárások.',
+        'practice-condominium-title': 'Társasházi jog',
+        'icon-condominium': 'Biztonság',
+        'practice-condominium-desc':
+          'Lakóközösség jogi szabályai, közös tulajdon, tulajdonostársak jogai ill. kötelezettségei, társasházi jogvita.',
+        'practice-civil society organizations-title': 'Civil szervezetek joga',
+        'icon-civil society organizations': 'Képviselet',
+        'practice-civil society organizations-desc':
+          'Egyesületek és alapítványok alapítása ill. módosítása, működéssel kapcsolatos jogi tanácsadás.',
         'contact-section-label': 'Elérhetőség',
         'contact-heading': 'Kapcsolatfelvétel',
         'contact-description':
@@ -530,7 +573,7 @@
         'contact-phone-label': 'Telefon',
         'contact-email-label': 'E-mail',
         'contact-address-label': 'Cím',
-        'map-label': 'Térkép: 1055 Budapest, Kossuth Lajos tér 1-3.',
+        'map-label': 'Térkép: 1037 Budapest, Jablonka út 92.',
         'footer-tagline': 'Több mint 10 éves tapasztalat, személyre szabott megoldások.',
         'footer-phone-label': 'Telefon',
         'footer-email-label': 'E-mail',
@@ -549,16 +592,11 @@
         'hero-secondary-cta': 'Practice Areas',
         'hero-image-alt': 'Portrait of Dr. Kristóf Puy',
         'about-section-label': 'About',
-        'about-heading': 'Dr. Kristóf Puy – personal attention in every case',
+        'about-heading': 'Dr. Kristóf Puy',
         'about-paragraph-1':
           'With more than 10 years of experience in civil and business law, I always prioritise my clients’ interests. Every matter is handled with personal attention, thorough preparation, and clear communication.',
         'about-paragraph-2':
           'My goal is to be more than legal representation – a committed partner who understands your needs and works toward the best possible outcome.',
-        'core-values-label': 'Core values',
-        'value-1': 'Transparent, straightforward communication',
-        'value-2': 'Tailored legal strategy',
-        'value-3': 'Precise adherence to deadlines',
-        'value-4': 'Discretion and trust',
         'practice-section-label': 'Practice areas',
         'practice-heading': 'Comprehensive legal support',
         'practice-description':
@@ -567,9 +605,9 @@
         'icon-civil': 'Contracts',
         'practice-civil-desc':
           'Contracts, compensation claims, property disputes, and estate matters handled end-to-end.',
-        'practice-family-title': 'Family law',
-        'icon-family': 'Safety',
-        'practice-family-desc':
+        'practice-sport-title': 'Family law',
+        'icon-sport': 'Safety',
+        'practice-sport-desc':
           'Prenuptial agreements, divorce proceedings, child support, division of assets.',
         'practice-realestate-title': 'Real estate law',
         'icon-realestate': 'Trust',
@@ -583,9 +621,9 @@
         'icon-business': 'Strategy',
         'practice-business-desc':
           'Corporate law, company formation, commercial agreements, legal support for M&A transactions.',
-        'practice-criminal-title': 'Criminal law',
-        'icon-criminal': 'Representation',
-        'practice-criminal-desc':
+        'practice-condominium-title': 'Criminal law',
+        'icon-condominium': 'Representation',
+        'practice-condominium-desc':
           'Defence in criminal proceedings, document forgery cases, and white-collar offences.',
         'contact-section-label': 'Contact',
         'contact-heading': 'Get in touch',
@@ -594,7 +632,7 @@
         'contact-phone-label': 'Phone',
         'contact-email-label': 'E-mail',
         'contact-address-label': 'Address',
-        'map-label': 'Map: 1055 Budapest, Kossuth Lajos tér 1-3.',
+        'map-label': 'Map: 1037 Budapest, Jablonka út 92.',
         'footer-tagline': 'More than 10 years of experience, tailored solutions.',
         'footer-phone-label': 'Phone',
         'footer-email-label': 'E-mail',
