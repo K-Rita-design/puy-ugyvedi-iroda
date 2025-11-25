@@ -474,29 +474,6 @@
   </footer>
 
   <script>
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
-    }
-
-    const navToggle = document.querySelector('[data-nav-toggle]');
-    const primaryNav = document.getElementById('primary-nav');
-    if (navToggle && primaryNav) {
-      navToggle.addEventListener('click', () => {
-        const isHidden = primaryNav.classList.toggle('hidden');
-        navToggle.setAttribute('aria-expanded', String(!isHidden));
-      });
-    }
-
-    const scrollTopLinks = document.querySelectorAll('[data-scroll-top]');
-    if (scrollTopLinks.length) {
-      scrollTopLinks.forEach(link => {
-        link.addEventListener('click', event => {
-          event.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      });
-    }
 
     const translations = {
       hu: {
@@ -639,6 +616,24 @@
     const languageToggle = document.querySelector('[data-language-toggle]');
     const i18nElements = document.querySelectorAll('[data-i18n]');
     const i18nAttrElements = document.querySelectorAll('[data-i18n-attr]');
+    const navToggle = document.querySelector('[data-nav-toggle]');
+    const primaryNav = document.getElementById('primary-nav');
+
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+
+    const scrollTopLinks = document.querySelectorAll('[data-scroll-top]');
+    if (scrollTopLinks.length) {
+      scrollTopLinks.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    }
+
 
     const applyLanguage = lang => {
       if (!translations[lang]) return;
@@ -686,10 +681,10 @@
       });
     }
 
-    const stickyNav = document.querySelector('[data-sticky-nav]');
-    if (stickyNav) {
-      const updateNavBackground = () => {
-        if (window.scrollY > 0) {
+
+    const updateNavBackground = () => {
+        if (window.scrollY > 0 || navToggle.getAttribute('aria-expanded') === 'true') 
+        {
           stickyNav.classList.add('hero-gradient');
           stickyNav.classList.remove('bg-transparent');
         } else {
@@ -697,8 +692,19 @@
           stickyNav.classList.add('bg-transparent');
         }
       };
+
+    const stickyNav = document.querySelector('[data-sticky-nav]');
+    if (stickyNav) {
       updateNavBackground();
       window.addEventListener('scroll', updateNavBackground, { passive: true });
+    }
+
+    if (navToggle && primaryNav) {
+      navToggle.addEventListener('click', () => {
+        const isHidden = primaryNav.classList.toggle('hidden');
+        navToggle.setAttribute('aria-expanded', String(!isHidden));
+        updateNavBackground();
+      });
     }
 
     // Scroll-triggered animations for practice-area cards
