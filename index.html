@@ -36,7 +36,7 @@
     }
 
     .hero-gradient {
-      background: radial-gradient(circle at top, rgba(11, 31, 53, 0.96) 15%, rgba(11, 31, 53, 0.93) 20%, rgba(11, 31, 53, 0.95) 55%, #050d18 100%);
+      background: radial-gradient(circle at top, rgba(11, 31, 53, 0.96) 15%, rgba(11, 31, 53, 0.93) 20%, rgba(11, 31, 53, 0.95) 55%, #050d18 120%);
 }
     .glass-panel {
       backdrop-filter: blur(18px);
@@ -218,7 +218,7 @@
         </div>
         </div>
 
-        <header id="top" class="relative text-white pt-56 pb-32 scroll-mt-28">
+        <header id="top" class="relative text-white pt-56 pb-32 scroll-mt-28 hero-gradient">
           <div class="relative z-10">
             <div class="mx-auto max-w-6xl px-6">
         
@@ -479,12 +479,29 @@
       yearSpan.textContent = new Date().getFullYear();
     }
 
+    const stickyNav = document.querySelector('[data-sticky-nav]');
+    let isMobileMenuOpen = false;
+
+    const updateNavBackground = () => {
+      if (!stickyNav) return;
+      if (window.scrollY > 0 || isMobileMenuOpen) {
+        stickyNav.classList.add('hero-gradient');
+        stickyNav.classList.remove('bg-transparent');
+      } else {
+        stickyNav.classList.remove('hero-gradient');
+        stickyNav.classList.add('bg-transparent');
+      }
+    };
+
     const navToggle = document.querySelector('[data-nav-toggle]');
     const primaryNav = document.getElementById('primary-nav');
     if (navToggle && primaryNav) {
       navToggle.addEventListener('click', () => {
         const isHidden = primaryNav.classList.toggle('hidden');
-        navToggle.setAttribute('aria-expanded', String(!isHidden));
+        const isExpanded = !isHidden;
+        navToggle.setAttribute('aria-expanded', String(isExpanded));
+        isMobileMenuOpen = isExpanded;
+        updateNavBackground();
       });
     }
 
@@ -686,20 +703,8 @@
       });
     }
 
-    const stickyNav = document.querySelector('[data-sticky-nav]');
-    if (stickyNav) {
-      const updateNavBackground = () => {
-        if (window.scrollY > 0) {
-          stickyNav.classList.add('hero-gradient');
-          stickyNav.classList.remove('bg-transparent');
-        } else {
-          stickyNav.classList.remove('hero-gradient');
-          stickyNav.classList.add('bg-transparent');
-        }
-      };
-      updateNavBackground();
-      window.addEventListener('scroll', updateNavBackground, { passive: true });
-    }
+    updateNavBackground();
+    window.addEventListener('scroll', updateNavBackground, { passive: true });
 
     // Scroll-triggered animations for practice-area cards
     const scrollAnimated = document.querySelectorAll('.fade-in-up-on-scroll');
